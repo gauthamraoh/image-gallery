@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.ng-image-slider {
+  background: #ebfaeb;
+  color: rgba(0, 0, 0, 0.55);
+  min-height: 83vh;
+  padding-top: 90px;
+}
+.footer {
+  height: 45px;
+  background: #d3d3d3;
+  text-align: center;
+  line-height: 45px;
+}
+.ng-image-slider .ng-image-slider-container .main {
+  position: relative !important;
+}
+@media only screen and (max-width: 600px) {
+  .nav-item {
+    text-align: center;
+    border-bottom: 1px solid green;
+  }
+  .profile {
+    text-align: center;
+    margin-right: 0 !important;
+    margin-top: 10px;
+  }
+  .cover-image-login {
+    max-width: 100%;
+    margin-left: 0 !important;
+    padding: 20px;
+  }
+  .card {
+    margin: 0 10px 0 10px;
+    width: 95% !important;
+  }
+}

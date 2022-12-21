@@ -1,0 +1,38 @@
+nav {
+  background: #d3d3d3 !important;
+  font-weight: bold;
+  .logo {
+    height: 50px;
+    width: 70px;
+  }
+  .user-icon {
+    height: 40px;
+    width: 40px;
+    box-shadow: 1px 1px 5px;
+    border-radius: 18px;
+    border: 1px solid green;
+  }
+  .user-icon:active {
+    border: none;
+    box-shadow: none;
+  }
+  .user-icon:hover {
+    border: none;
+  }
+  .space-between {
+    justify-content: space-between;
+  }
+  .profile {
+    margin-right: 45px;
+  }
+  .dropdown-menu.show {
+    left: auto;
+    right: 0;
+  }
+}
+.footer {
+    height: 45px;
+    background: #d3d3d3;
+    text-align: center;
+    line-height: 45px;
+  }
