@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+a {
+  text-decoration: none !important;
+}
 .ng-image-slider {
   background: #ebfaeb;
   color: rgba(0, 0, 0, 0.55);
@@ -34,5 +37,18 @@
   .card {
     margin: 0 10px 0 10px;
     width: 95% !important;
+  }
+  .inner-content {
+    width: auto !important;
+  }
+  .dropdown.profile {
+    margin-bottom: -8px;
+    padding-bottom: 15px;
+  }
+  li.nav-item:first-child {
+    border-top: 1px solid green;
+  }
+  .last-child-nav {
+    margin-bottom: -8px;
   }
 }

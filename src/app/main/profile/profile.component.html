@@ -1,7 +1,19 @@
+
 <ng-image-slider
-  slideImage="1"
-  [imageSize]="{ width: '25%', height: 300 }"
-  [autoSlide]="1"
+  *ngIf="imageList?.length"
+  [imageSize]="imageWidth"
+  [autoSlide]="{ interval: 2, stopOnHover: true }"
   [images]="imgCollection"
+  [infinite] = 'true'
+  [imagePopup] = 'true'
+  [animationSpeed] = '0.5'
+  [slideImage] = "slideImage"
+  [showVideoControls]= 'true'
+  [videoAutoPlay]="true"
   #nav
 ></ng-image-slider>
+<h3 *ngIf="!imageList?.length" class="no-image">
+  <span class="inner-content">
+    You have not uploaded any images/videos please click on <em><a [routerLink]="'/add-to-profile'">Add to Profile</a></em> and add images/videos to your profile.
+  </span>
+</h3>

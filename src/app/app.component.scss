@@ -36,3 +36,14 @@ nav {
     text-align: center;
     line-height: 45px;
   }
+
+  .nav-item.dropdown.profile .dropdown-menu {
+    img {
+      width: 25px;
+      margin-right: 10px;
+    }
+    a {
+      display: block;
+      line-height: 2.3;
+    }
+  }

@@ -1,0 +1,17 @@
+.no-image {
+    background: #ebfaeb;
+    color:rgba(0, 0, 0, 0.55);
+    min-height: 83vh;
+    display: flex;
+    flex-flow: column;
+    margin:0;
+}
+.inner-content {
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 150px;
+    em{
+        color: black;
+    }
+}
