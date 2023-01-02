@@ -84,9 +84,10 @@ export class AppComponent implements OnInit, OnChanges {
 
   fetchProfileImage() {
     const imageApi = 'http://localhost:4000/uploads/'
+    debugger
     this._api.getProfileImage().subscribe((res: any) => {
       this.imageList = res?.data;
-      if(this.imageList.avatar) {
+      if(this.imageList[0].avatar) {
         this.profileImagePath = imageApi + this.imageList[0].avatar;
       } else {
         this.profileImagePath = '/assets/images/user.png'
