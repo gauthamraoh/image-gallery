@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+
 a {
   text-decoration: none !important;
 }
@@ -18,6 +19,13 @@ a {
 }
 .ng-image-slider .ng-image-slider-container .main {
   position: relative !important;
+}
+.modal-body img {
+  width: 150px;
+  height: 150px;
+}
+.modal-body {
+  margin: 0 auto;
 }
 @media only screen and (max-width: 600px) {
   .nav-item {
@@ -51,4 +59,8 @@ a {
   .last-child-nav {
     margin-bottom: -8px;
   }
+  .btn.btn-outline-info:disabled {
+    border: 1px solid #d3d3d3;
+    color: #d3d3d3;
+}
 }

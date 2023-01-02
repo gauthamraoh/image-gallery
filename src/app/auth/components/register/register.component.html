@@ -91,6 +91,7 @@
       <div class="form-group">
         <label>Password<span class="required">*</span></label>
         <input
+          (keyup)="confirmValidation()"
           formControlName="password"
           class="form-control"
           type="password"
@@ -112,7 +113,33 @@
           </div>
         </div>
       </div>
-      <input [disabled]="!registerForm.valid" class="btn btn-outline-info" type="submit" value="Register" />
+      <div class="form-group confirm-pass">
+        <label>Confirm Password<span class="required">*</span></label>
+        <input
+          (keyup)="confirmValidation()"
+          formControlName="confirmPassword"
+          class="form-control"
+          type="password"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+          ngModel
+          required
+        />
+        <i *ngIf="confirmPasswordCheck" class="fa fa-check fa-confirm" aria-hidden="true"></i>
+        <div
+          *ngIf="
+            registerForm.controls['confirmPassword'].invalid &&
+            (registerForm.controls['confirmPassword'].dirty ||
+              registerForm.controls['confirmPassword'].touched)
+          "
+          class="alert alert-danger"
+        >
+          <div *ngIf="registerForm.controls['confirmPassword'].errors?.['required']">
+            Password is required.
+          </div>
+        </div>
+      </div>
+      <input [disabled]="!registerForm.valid || !confirmPasswordCheck" class="btn btn-outline-info" type="submit" value="Register" />
     </form>
   </div>
 </div>

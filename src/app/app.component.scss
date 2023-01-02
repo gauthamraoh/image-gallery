@@ -31,19 +31,66 @@ nav {
   }
 }
 .footer {
-    height: 45px;
-    background: #d3d3d3;
-    text-align: center;
-    line-height: 45px;
-  }
+  height: 45px;
+  background: #d3d3d3;
+  text-align: center;
+  line-height: 45px;
+}
+.btn.btn-outline-info {
+  margin-top: 20px;
+  margin-left: 35%;
+}
 
-  .nav-item.dropdown.profile .dropdown-menu {
-    img {
-      width: 25px;
-      margin-right: 10px;
-    }
-    a {
-      display: block;
-      line-height: 2.3;
-    }
+.btn.btn-outline-info:disabled {
+  border: 1px solid #d3d3d3;
+  color: #d3d3d3;
+}
+
+.modal-body > img {
+  margin-left: 25%;
+}
+.modal-body > .alert.alert-success {
+  text-align: center;
+}
+
+.required {
+  color: red;
+}
+.reset-modal-body {
+  width: 70%;
+}
+.fg-1-g {
+  margin-bottom: 20px;
+}
+.fg-1-g .alert-danger {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.modal-input-upload {
+  margin-top: 20px;
+}
+
+.reset-pass-button {
+  margin-left: 27% !important;
+}
+.confirm-pass {
+  position: relative;
+}
+.fa-confirm {
+  position: absolute;
+  left: 90%;
+  top: 55.5%;
+  color: #228c22;
+}
+
+.nav-item.dropdown.profile .dropdown-menu {
+  img {
+    width: 25px;
+    margin-right: 10px;
   }
+  a {
+    display: block;
+    line-height: 2.3;
+  }
+}

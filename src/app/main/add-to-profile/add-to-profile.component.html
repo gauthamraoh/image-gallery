@@ -1,6 +1,6 @@
 <div class="row m-0 w-100 main-div">
     <div class="col-md-4 col-sm-10 col-xs-10 offset-md-4 mt-5 card">
-      <h4>Upload Images</h4>
+      <h4>Upload Media</h4>
       <div class="alert alert-success" role="alert" *ngIf="message">
           {{message}}
         </div>
@@ -9,7 +9,7 @@
         (ngSubmit)="onSubmit()"
       >
         <div class="form-group">
-          <label>Images<span class="required">*</span></label>
+          <label>Media<span class="required">*</span></label>
           <input
             formControlName="image"
             class="form-control"

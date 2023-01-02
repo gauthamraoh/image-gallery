@@ -11,13 +11,16 @@ import { HomeComponent } from './auth/components/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { AddToProfileComponent } from './main/add-to-profile/add-to-profile.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UpdateProfileComponent } from './main/update-profile/update-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     HomeComponent,
-    AddToProfileComponent
+    AddToProfileComponent,
+    UpdateProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { AddToProfileComponent } from './main/add-to-profile/add-to-profile.comp
     RouterModule,
     AuthModule,
     ReactiveFormsModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    NgbModule
   ],
   providers: [
     {

@@ -9,10 +9,19 @@
     }
     .card {
         box-shadow: 0px 0px 8px green;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
         margin-bottom: 40px;
         h4 {
             margin-top: 20px;
         }
+    }
+    .media-list {
+        border-bottom: 1px solid green;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-top: 10px;
     }
     .required {
         color: red;
@@ -32,13 +41,20 @@
         border: 1px solid #d3d3d3;
         color: #d3d3d3;
     }
-    .confirm-pass {
-        position: relative;
+    .fa.fa-delete-trash {
+        float: right;
+        margin-right: 0px;
+        font-size: 25px;
     }
-    .fa-confirm {
-        position: absolute;
-        left: 90%;
-        top: 55.5%;
-        color: #228C22;
+    .fa.fa-delete-trash:hover {
+        color: red;
+    }
+    .delete-list-image {
+        width: 50px;
+        height: 50px;
+        display: inline;
+        float: left;
+        margin-right: 20px;
+        margin-top: 10px;
     }
 }

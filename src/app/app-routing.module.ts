@@ -5,6 +5,7 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { RegisterComponent } from './auth/components/register/register.component';
 import { AddToProfileComponent } from './main/add-to-profile/add-to-profile.component';
 import { ProfileComponent } from './main/profile/profile.component';
+import { UpdateProfileComponent } from './main/update-profile/update-profile.component';
 import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'profile', canActivate: [AuthGuardService], component: ProfileComponent},
-  {path: 'add-to-profile', canActivate: [AuthGuardService], component: AddToProfileComponent}
+  {path: 'add-to-profile', canActivate: [AuthGuardService], component: AddToProfileComponent},
+  {path: 'update-profile', canActivate: [AuthGuardService], component: UpdateProfileComponent}
 ];
 
 @NgModule({

@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
   errorMessage: any;
   successMessage: any;
   registerForm!: FormGroup;
+  confirmPasswordCheck: any = false;
   constructor(
     private _api: ApiService,
     private _auth: AuthService,
@@ -29,7 +30,8 @@ export class RegisterComponent implements OnInit {
       name: ['', Validators.required ],
       username: ['', Validators.required ],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required ]
+      password: ['', Validators.required ],
+      confirmPassword: ['', Validators.required ]
    })
   }
 
@@ -55,7 +57,21 @@ export class RegisterComponent implements OnInit {
           console.log(res);
         }
       });
+      this.confirmPasswordCheck = false;
   }
+
+  confirmValidation() {
+    if(this.registerForm.value.confirmPassword && this.registerForm.value.password) {
+      if(this.registerForm.value.confirmPassword === this.registerForm.value.password) {
+        this.confirmPasswordCheck = true;
+      } else {
+        this.confirmPasswordCheck = false;
+      }
+    } else {
+      this.confirmPasswordCheck = false;
+    }
+  }
+
   isUserLogin() {
     if (this._auth.getUserDetails() != null) {
       this.isLogin = true;

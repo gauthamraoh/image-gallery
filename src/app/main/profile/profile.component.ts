@@ -36,9 +36,9 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   ) { }
 
   ngOnInit(): void {
-    this._api.getTypeRequest('profile/profile').subscribe((res: any) => {
-      this.protectedData = res
-    });
+    // this._api.getTypeRequest('profile/profile').subscribe((res: any) => {
+    //   this.protectedData = res
+    // });
     const imageApi = 'http://localhost:4000/uploads/'
     this._api.getImages().subscribe((res: any) => {
       this.imageList = res?.data;
