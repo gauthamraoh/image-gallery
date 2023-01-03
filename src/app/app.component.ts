@@ -1,4 +1,5 @@
-import { ChangeDetectorRef, Component, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy } from '@angular/compiler';
+import { AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
@@ -10,7 +11,7 @@ import { AuthService } from './services/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnChanges {
+export class AppComponent implements OnInit, OnChanges, AfterViewChecked {
   title = 'angular_app';
   isLogin = false;
   userName!: any;
@@ -33,7 +34,6 @@ export class AppComponent implements OnInit, OnChanges {
   ngOnInit(){
     this.isUserLogin();
     this.getName();
-    this.fetchProfileImage();
     this.imageForm = this.fb.group({
       image: ['', Validators.required],
     });
@@ -42,6 +42,10 @@ export class AppComponent implements OnInit, OnChanges {
       password: ['', Validators.required ],
       confirmPassword: ['', Validators.required ]
    })
+  }
+
+  ngAfterViewChecked(): void {
+    this.fetchProfileImage();
   }
 
   onPasswordSubmit() {
